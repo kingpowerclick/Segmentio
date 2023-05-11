@@ -328,6 +328,7 @@ open class Segmentio: UIView {
         shapeLayer.strokeColor = backgroundColor.cgColor
         shapeLayer.lineWidth = height
         shapeLayer.lineCap = rounded ? .round : .butt
+        
         layer.insertSublayer(shapeLayer, below: sublayer)
     }
     
@@ -564,7 +565,7 @@ open class Segmentio: UIView {
         case .top:
             indicatorPointY = (indicatorOptions.height / 2)
         case .bottom:
-            indicatorPointY = frame.height - (indicatorOptions.height / 2)
+            indicatorPointY = frame.height
         }
         
         guard let horizontalSeparatorOptions = segmentioOptions.horizontalSeparatorOptions else {
